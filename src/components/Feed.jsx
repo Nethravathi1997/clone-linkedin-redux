@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import CreateIcon from "@mui/icons-material/Create";
-import './Feed.css'
+import FlipMove from "react-flip-move"
+import "./Feed.css";
 import {
   addFeedError,
   addFeedLoading,
@@ -54,7 +55,10 @@ export const Feed = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ status: false, title: text }),
+      body: JSON.stringify({ 
+        status: false, 
+        title: text,
+    }),
     })
       .then((d) => d.json())
       .then((res) => {
@@ -93,12 +97,13 @@ export const Feed = () => {
           </form>
         </div>
       </div>
-
+<FlipMove>
       {feeds.map((e, i) => (
         <div key={i}>
           {e.title} - {e.status ? "Done" : "Not Done"}
         </div>
       ))}
+      </FlipMove>
     </div>
   );
 };
