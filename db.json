@@ -1,29 +1,22 @@
 {
   "feeds": [
     {
-      "status": false,
-      "title": "hello",
-      "id": 1
+      "name": "Nethravathi",
+      "description": "tnethravathi7@gmail.com",
+      "title": "nethra",
+      "id": 7
     },
     {
-      "status": false,
-      "title": "namaste",
-      "id": 2
+      "name": "Nethravathi",
+      "description": "tnethravathi7@gmail.com",
+      "title": "hello world",
+      "id": 8
     },
     {
-      "status": false,
-      "title": "hi",
-      "id": 3
-    },
-    {
-      "status": false,
-      "title": "good",
-      "id": 4
-    },
-    {
-      "status": false,
-      "title": "hat",
-      "id": 5
+      "name": "Nethravathi",
+      "description": "tnethravathi7@gmail.com",
+      "title": "enter name",
+      "id": 9
     }
   ]
 }
