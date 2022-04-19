@@ -1,0 +1,10 @@
+export const ADD_FEED = "ADD_FEED";
+export const REMOVE_FEED = "REMOVE_FEED";
+
+export const ADD_FEED_LOADING = "ADD_FEED_LOADING";
+export const ADD_FEED_SUCCESS = "ADD_FEED_SUCCESS";
+export const ADD_FEED_ERROR = "ADD_FEED_ERROR";
+
+export const GET_FEED_LOADING = "GET_FEED_LOADING";
+export const GET_FEED_SUCCESS = "GET_FEED_SUCCESS";
+export const GET_FEED_ERROR = "GET_FEED_ERROR";
