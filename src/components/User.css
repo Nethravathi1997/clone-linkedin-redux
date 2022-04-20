@@ -1,14 +1,47 @@
+.network{
+    display: flex;
+    margin-left: 100px;
+}
 .user{
-   width: 50%;
+   width:650px;
    background-color: white; 
    border-radius: 10px;
    border: 1px solid lightgray;
+   padding-right: 10px;
 }
 .user_input{
     margin-left: 30px;
 }
 .user_input > h2{
     font-weight: 400;
+}
+.search{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    height: 16px;
+    width: 200px;
+    color: gray;
+    background-color: rgb(249,250,251);
+    margin-left: 200px;
+    padding-right: 10px;
+    border: 1px solid black;
+}
+.search > input {
+    border: none;
+    background-color: rgb(249,250,251);
+    margin-left: 10px;
+}
+.option{
+    display: flex;
+    color: gray;
+}
+.option > select{
+    border: none;
+    color: gray;
+    font-size: 15px;
+    margin-top: 5px;
 }
 .post{
     margin-left: 10px;
@@ -17,6 +50,70 @@
 .ip{
     display: flex;
 }
+.post_info{
+    width: 300px;
+}
+.color{
+    background-color: aqua;
+}
+.post_header > button{
+    height: 30px;
+    width: 80px;
+    margin-left: 20px;
+    border-radius: 20%;
+    border: none;
+    border: 2px solid rgb(68, 68, 247);
+    color: rgb(68, 68, 247);
+    background-color: white;
+}
+
 .ip > form {
     margin-left: 200px;
+}
+.h3{
+    margin-left: 25px;
+    font-weight: 500;
+    color: grey;
+    font-size: 15px;
+}
+.top{
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 20px;
+
+    text-align: center;
+    padding: 5px;
+}
+.top > h4{
+    font-weight: 500;
+    color: grey;
+}
+.top > p{
+    font-size: 12px;
+    color: gray;
+}
+.top > input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid gray;
+}
+.top > button{
+    border: none;
+    background-color: rgb(245, 244, 244);
+    color: rgb(68, 67, 67);
+    height: 30px;
+    width: 120px;
+    margin-top: 8px;
+    border-radius: 10%;
+}
+.bottom{
+    margin-left: 22px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.msg{
+    margin-left: 550px;
 }
