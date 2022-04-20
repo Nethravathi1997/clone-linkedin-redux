@@ -5,19 +5,8 @@ import CreateIcon from "@mui/icons-material/Create";
 import FlipMove from "react-flip-move";
 import "./User.css";
 import { Avatar } from "@mui/material";
-import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
-import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import InputOption from "./InputOption";
-import ImageIcon from '@mui/icons-material/Image'
-import SubscriptionsIcon from '@mui/icons-material/Subscriptions'
-import EventNoteIcon from '@mui/icons-material/EventNote'
-import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay'
+
 import {
-  addUserError,
-  addUserLoading,
-  addUserSuccess,
   getUserError,
   getUserLoading,
   getUserSuccess,
@@ -25,20 +14,13 @@ import {
 
 function Mynetwork() {
 
-  const [text, setText] = useState("");
+  const [search, setSearch] = useState("");
+  console.log(search);
 
-  const { loading, users, error } = useSelector(
+  const { users} = useSelector(
     (state) => ({
-      loading: state.usersState.loading,
       users: state.usersState.users,
-      error: state.usersState.error,
     }),
-    function (prev, curr) {
-      if (prev.loading === curr.loading && prev.error === curr.error) {
-        return true;
-      }
-      return false;
-    }
   );
   const dispatch = useDispatch();
 
@@ -58,56 +40,50 @@ function Mynetwork() {
       dispatch(getUserError());
     }
   }
-  const comment = () => {
-
-  }
-
-  const addUser = () => {
-   
-      setText("");
-  };
-
-  return loading ? (
-    <div>Loading...</div>
-  ) : error ? (
-    <div>Something went wrong</div>
-  ) : (
+  return(
     <div className="user">
       <div className="user_inputContainer">
         <div className="user_input">
-          <CreateIcon />
-          <form>
+         <h2> {users.length} Connections </h2>
+         <div className="ip">
+           <select>
+             <option value="">Sort by</option>
+             <option value="f_name">First name</option>
+             <option value="f_name">Last name</option>
+           </select>
+         <form>
             <input
-              value={text}
               type="text"
               placeholder="Enter User"
-              onChange={(e) => setText(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             />
-
-            <button
-              onClick={() => {
-                addUser();
-              }}
-            >
-              Add User
-            </button>
           </form>
+
+         </div>
+          
           
         </div>
       </div>
       <FlipMove>
-        {users.map((e, i) => (
+        {users
+        .filter((e) => {
+          if(search === ""){
+            return e
+          }else{
+            return e.first_name.toLowerCase().includes(search.toLowerCase());
+          }
+        })
+        .map((e, i) => (
           <div key={i}>
             <div className="post">
               <div className="post_header">
                 <Avatar>{e.first_name[0]}</Avatar>
                 <div className="post_info">
-                  <h2>{e.first_name}</h2>
+                  <h2>{e.first_name} {e.last_name}</h2>
                   <p>{e.email}</p>
                 </div>
               </div>
-              <div className="post_body">{e.title}</div>
-              
+              <button>Remove</button>      
             </div>
             
           </div>

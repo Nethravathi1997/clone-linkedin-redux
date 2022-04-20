@@ -1,0 +1,22 @@
+.user{
+   width: 50%;
+   background-color: white; 
+   border-radius: 10px;
+   border: 1px solid lightgray;
+}
+.user_input{
+    margin-left: 30px;
+}
+.user_input > h2{
+    font-weight: 400;
+}
+.post{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.ip{
+    display: flex;
+}
+.ip > form {
+    margin-left: 200px;
+}
