@@ -21,7 +21,7 @@ import {
   getFeedError,
   getFeedLoading,
   getFeedSuccess,
-} from "../Redux/actions.js";
+} from "../Redux/feeds/actions.js";
 
 export const Feed = () => {
   const [text, setText] = useState("");

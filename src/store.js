@@ -1,7 +1,9 @@
 import { combineReducers, createStore } from "redux";
-import { reducer as FeedsReducer } from "./Redux/reducer";
+import { reducer as UsersReducer } from "./Redux/users/reducer";
+import { reducer as FeedsReducer } from "./Redux/users/reducer";
 
 const rootReducer = combineReducers({
+    usersState: UsersReducer,
     feedsState: FeedsReducer
 });
 
