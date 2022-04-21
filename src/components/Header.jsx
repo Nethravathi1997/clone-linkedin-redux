@@ -18,9 +18,7 @@ function Header() {
   const navigate = useNavigate();
   const {handleToken} = useContext(AuthContext);
 
-  const logout = () => {
-    handleToken("");
-  }
+  
 
   return (
     <div className="header">
@@ -49,7 +47,7 @@ function Header() {
         <Link to="/login">
           <HeaderOption avatar={true} title="me" />
         </Link>
-        <button onClick={() => logout()}>Sign out</button>
+        <button>Sign out</button>
       </div>
     </div>
   );
