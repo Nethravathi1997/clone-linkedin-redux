@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import CreateIcon from "@mui/icons-material/Create";
 import FlipMove from "react-flip-move";
 import "./User.css";
+import axios from "axios";
 import { Avatar } from "@mui/material";
 import { SearchIcon } from "@chakra-ui/icons";
 
@@ -17,7 +18,10 @@ function Mynetwork() {
 
   const [search, setSearch] = useState("");
   const [list,setList] = useState("");
-  console.log(search);
+  const [data,setData] = useState([]);
+  const [sortValue,setSortValue] = useState("");
+ 
+  const sortOptions = ["first_name","last_name"];
 
   const { users} = useSelector(
     (state) => ({
@@ -32,11 +36,10 @@ function Mynetwork() {
 
   const deleteUser = (index) => {
     console.log(index);
-    var newlist = list;
+    var newlist = users;
     newlist.splice(index,1);
     setList([...newlist]);
   }
-
   async function getUsers() {
     try {
       dispatch(getUserLoading());
@@ -49,6 +52,7 @@ function Mynetwork() {
       dispatch(getUserError());
     }
   }
+
   return(
     <div className="network">
     <div className="user">
@@ -59,8 +63,10 @@ function Mynetwork() {
            <div className="option">
              <p>Sort By : </p>
            <select>
-             <option value="f_name">First name</option>
-             <option value="l_name">Last name</option>
+             <option onChange={(e) => setSortValue(e.target.value)}>Select Order</option>
+             {sortOptions.map((item,index) => (
+               <option value={item} key={index} >{item}</option>
+             ))}
            </select>
            </div>
             <div className="search">
@@ -89,8 +95,14 @@ function Mynetwork() {
             e.last_name.toLowerCase().includes(search.toLowerCase()));
           }
         })
+        .sort((a,b) => {
+          if(sortValue === "first_name"){
+            console.log(sortValue);
+            return a.first_name - b.first_name ;
+          }
+        })
         .map(({first_name,last_name,email},index) => (
-          <div>
+          <div key={index}>
             <div className="post">
               <div className="post_header">
                 <Avatar>{first_name[0]}</Avatar>

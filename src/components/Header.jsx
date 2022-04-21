@@ -33,8 +33,9 @@ function Header() {
         <Link to="/mynetwork">
           <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
         </Link>
-
+        <Link to="/jobs">
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
+        </Link>
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
         <Link to="/login">
