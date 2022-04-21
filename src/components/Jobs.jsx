@@ -28,8 +28,6 @@ function Jobs() {
         }
       );
       const dispatch = useDispatch();
-
-      dispatch(appliedJobs(id));
     
       useEffect(() => {
         getJobs();
@@ -75,7 +73,7 @@ function Jobs() {
                 </div>
               </div>
               <div className="post_body">{title}</div>
-              
+              <button>Apply</button>
             </div>
             
           </div>

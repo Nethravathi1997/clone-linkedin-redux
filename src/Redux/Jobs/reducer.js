@@ -8,7 +8,7 @@ import {
     GET_JOB_ERROR
   } from "./actionTypes";
   
-  const init = { loading: false, jobs:[], error: false};
+  const init = { loading: false, jobs:[],cart:[], error: false};
   
   export const reducer = (state = init, { type, payload }) => {
     switch (type) {
