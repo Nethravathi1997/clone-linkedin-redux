@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import FlipMove from "react-flip-move";
 import "./addJobs.css";
 import { Avatar } from "@mui/material";
+import { PrivateRoute } from './PrivateRoute';
 import {
     getJobError,
     getJobLoading,

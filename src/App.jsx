@@ -1,11 +1,12 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import { Login } from "./components/Login";
+import {Login} from './components/Login'
 import Mynetwork from "./components/Mynetwork"
 import Header from "./components/Header";
 import Jobs from "./components/Jobs";
 import { AddJobs } from "./components/AddJobs";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="mynetwork" element={<Mynetwork />}></Route>
           <Route path="jobs" element={<Jobs />}></Route>
-          <Route path="addjobs" element={<AddJobs />}></Route>
+         <Route path="addjobs" element={<PrivateRoute><AddJobs /></PrivateRoute> }></Route>
           <Route path="login" element={<Login />}></Route>
         </Routes>
       </div>
