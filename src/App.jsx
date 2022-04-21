@@ -5,6 +5,7 @@ import { Login } from "./components/Login";
 import Mynetwork from "./components/Mynetwork"
 import Header from "./components/Header";
 import Jobs from "./components/Jobs";
+import { AddJobs } from "./components/AddJobs";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="mynetwork" element={<Mynetwork />}></Route>
           <Route path="jobs" element={<Jobs />}></Route>
+          <Route path="addjobs" element={<AddJobs />}></Route>
           <Route path="login" element={<Login />}></Route>
         </Routes>
       </div>
