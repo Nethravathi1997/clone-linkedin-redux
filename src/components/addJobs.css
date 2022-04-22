@@ -1,8 +1,28 @@
 .addjob{
     background-color: rgb(10,102,194);
     height: 18cm;
-    width: 265%;
-    margin-left: -145px;
+    width: 1510px;
+    margin-left: -120px;
     margin-right: -20px;
     margin-top: -10px;
+}
+.job_input{
+    background-color: white;
+    height: 12cm;
+    width: 10cm;
+    margin-left: 38%;
+    border-radius: 10px;
+    
+}
+.addjob > h1{
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+.addjob > p{
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    text-align: center;
 }

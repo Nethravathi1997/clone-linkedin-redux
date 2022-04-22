@@ -57,7 +57,10 @@ export const AddJobs = () => {
 
   return (
     <div className="job">
+        
       <div className="addjob">
+      <h1>Find a great hire, fast</h1>
+      <p>Rated #1 in delivering quality hires</p>
         <div className="job_input">
           <form>
             <input
@@ -65,25 +68,25 @@ export const AddJobs = () => {
               type="text"
               placeholder="Job Title"
               onChange={(e) => setText(e.target.value)}
-            />
+            /> <br />
             <input
               value={company}
               type="text"
               placeholder="Company Name"
               onChange={(e) => setCompany(e.target.value)}
-            />
+            /> <br />
             <input
               value={city}
               type="text"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
-            />
+            /> <br />
             <input
               type="url"
               placeholder="Add image"
               value={img}
               onChange={(e) => setImg(e.target.value)}
-            />
+            /> <br />
 
             <button
               onClick={() => {
