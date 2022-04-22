@@ -1,6 +1,6 @@
 .header{
     display: flex;
-    top: 0;
+    top: -5px;
     display: flex;
     background-color: white;
     justify-content: space-evenly;
@@ -9,6 +9,7 @@
     padding-bottom: 10px;
     width: 100%;
     z-index: 999;
+    height: 40px;
 }
 .header_left{
     display: flex;
