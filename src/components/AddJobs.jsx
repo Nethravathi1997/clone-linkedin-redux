@@ -13,7 +13,7 @@ import {
 
 export const AddJobs = () => {
   const [text, setText] = useState("");
-  const [company,setCompany] = useState("");
+  const [company, setCompany] = useState("");
   const [city, setCity] = useState("");
   const [img, setImg] = useState("");
 
@@ -40,11 +40,10 @@ export const AddJobs = () => {
       body: JSON.stringify({
         title: text,
         company: company,
-        city:city,
-        image:img,
+        city: city,
+        image: img,
         date: new Date().toLocaleString(),
-      },
-      ),
+      }),
     })
       .then((d) => d.json())
       .then((res) => {
@@ -53,12 +52,12 @@ export const AddJobs = () => {
       .catch((err) => {
         dispatch(addJobError(err));
       });
-      setText("");
+    setText("");
   };
 
   return (
     <div className="job">
-      <div className="job_inputContainer">
+      <div className="addjob">
         <div className="job_input">
           <form>
             <input
@@ -67,9 +66,24 @@ export const AddJobs = () => {
               placeholder="Job Title"
               onChange={(e) => setText(e.target.value)}
             />
-            <input value={company} type="text" placeholder="Company Name" onChange={(e) => setCompany(e.target.value)} />
-            <input value={city} type="text" placeholder="City" onChange={(e) => setCity(e.target.value)} />
-            <input type="url" placeholder="Add image"  value={img} onChange={(e) => setImg(e.target.value)}/>
+            <input
+              value={company}
+              type="text"
+              placeholder="Company Name"
+              onChange={(e) => setCompany(e.target.value)}
+            />
+            <input
+              value={city}
+              type="text"
+              placeholder="City"
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <input
+              type="url"
+              placeholder="Add image"
+              value={img}
+              onChange={(e) => setImg(e.target.value)}
+            />
 
             <button
               onClick={() => {
@@ -79,9 +93,7 @@ export const AddJobs = () => {
               Add Job
             </button>
           </form>
-          
         </div>
-        
       </div>
     </div>
   );

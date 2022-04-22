@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="mynetwork" element={<Mynetwork />}></Route>
           <Route path="jobs" element={<Jobs />}></Route>
-         <Route path="addjobs" element={<PrivateRoute><AddJobs /></PrivateRoute> }></Route>
+          <Route path="addjobs" element={<AddJobs />}></Route>
           <Route path="login" element={<Login />}></Route>
         </Routes>
       </div>

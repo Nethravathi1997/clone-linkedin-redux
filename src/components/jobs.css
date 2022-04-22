@@ -102,6 +102,22 @@
     font-size: 16px;
     color: rgb(89,89,89);
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     
+}
+.apj{
+    width: 5cm;
+    height: 40px;
+    margin-left: 0.5cm;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border: none;
+    border: 2px solid rgb(10,102,194);
+    color:rgb(10,102,194) ;
+    font-size: 15px;
+
+}
+.apj:hover{
+    background-color:rgb(195, 221, 247) ;
 }

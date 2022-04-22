@@ -1,16 +1,15 @@
 import React from "react";
-import AddJobs from "./AddJobs";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import FlipMove from "react-flip-move";
 import "./addJobs.css";
-import CreateIcon from "@mui/icons-material/Create";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { EditIcon } from "@chakra-ui/icons";
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
@@ -18,6 +17,7 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 import SubjectIcon from '@mui/icons-material/Subject';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import SettingsIcon from '@mui/icons-material/Settings';
+
 import {
   getJobError,
   getJobLoading,
@@ -99,7 +99,7 @@ function Jobs() {
               </div>
           </div>
         <Link to="/addjobs">
-          <button>Post Job</button>
+          <button className="apj"><EditIcon />    Post a free job</button>
         </Link>
       </div>
       <div
