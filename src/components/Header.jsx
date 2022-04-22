@@ -47,7 +47,6 @@ function Header() {
         <Link to="/login">
           <HeaderOption avatar={true} title="me" />
         </Link>
-        <button>Sign out</button>
       </div>
     </div>
   );

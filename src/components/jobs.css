@@ -1,5 +1,107 @@
-.img {
-    height: 100px;
-    width: 100px;
+.img{
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
+}
+.Job{
+    background-color: white;
+}
+.jobbox{
+    margin-left: 10px;
+    background-color: white;
+    display: flex;
+    border: 1px solid rgb(236, 234, 234);
+    margin: 5px;
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.hire{
+    color: gray;
+    font-size: 12px;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.hire>p{
+    margin-left: 8px;
+    margin-top: 0px;
+}
+.hire > img {
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+.Job_header{
+    display: flex;
+}
+.Job_header > img{
+    border-radius: 50%;
+}
+.book{
+    margin-left: 250px;
+    margin-top: -90px;
+}
+.cminfo{
+    margin-left: 100px;
+    line-height: 10px;
+    color: gray;
+}
+.cminfo>p{
+ font-size: 12px;
+}
+.Job_body{
+    font-weight: 600;
+    color: rgb(10,102,194);
+    margin-top: 5px;
+    
+}
+.top{
+    height: 10cm;
+    width: 8cm;
+    background-color: white;
+    position: sticky;
+}
+.top>h2 {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+.bottom{
+    height: 7cm;
+    width: 8cm;
+    background-color: white;
+    position: sticky;
+    text-align: left;
+    padding: 10px;
+
+}
+.bottom > h2 {
+    font-weight: 500;
+}
+.l1{
+    height: 15cm;
+    width: 6cm;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    position: sticky;
+}
+.l1 > div >div> h3{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(89,89,89);
+    margin-top: 0px;
+    margin-left: 10px;
+    
+    
+}
+.l1 > div >div{
+    display: flex;
+    font-size: 16px;
+    color: rgb(89,89,89);
+    margin-left: 20px;
+    margin-top: 30px;
+    
 }
