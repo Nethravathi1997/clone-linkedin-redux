@@ -8,14 +8,14 @@ import {
     GET_JOB_ERROR
   } from "./actionTypes";
   
-  const init = { loading: false, jobs:[],cart:[], error: false};
+  const init = { loading: false, jobs:[], error: false};
   
   export const reducer = (state = init, { type, payload }) => {
     switch (type) {
       case ADD_JOB:
         return {
           ...state,
-          jobs: [...state.jobs, payload],
+          jobs: [payload, ...state.jobs],
         };
       case ADD_JOB_LOADING:
         return {
@@ -25,7 +25,7 @@ import {
       case ADD_JOB_SUCCESS:
         return {
           ...state,
-          jobs: [...state.jobs, payload],
+          jobs: [payload, ...state.jobs],
           loading: false,
         };
   

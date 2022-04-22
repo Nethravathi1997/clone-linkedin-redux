@@ -110,8 +110,7 @@ function Jobs() {
         <FlipMove>
           {jobs
             .sort((a, b) => {
-              return b.city - a.city;
-              console.log(b.city - a.city);
+              return b.index - a.index;
             })
             .map(({ date, title, company, city, image }, index) => (
               <div className="jobbox" key={index}>

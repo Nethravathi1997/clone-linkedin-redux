@@ -62,28 +62,34 @@ export const AddJobs = () => {
       <h1>Find a great hire, fast</h1>
       <p>Rated #1 in delivering quality hires</p>
         <div className="job_input">
-          <form>
+          <form >
+              <br />
+              <br />
+              <label >Job title <span style={{color:"red",fontWeight:"500"}}>*</span></label>
             <input
               value={text}
               type="text"
               placeholder="Job Title"
               onChange={(e) => setText(e.target.value)}
             /> <br />
+            <label >Company <span style={{color:"red",fontWeight:"500"}}>*</span></label>
             <input
               value={company}
               type="text"
-              placeholder="Company Name"
+              placeholder="Company"
               onChange={(e) => setCompany(e.target.value)}
             /> <br />
+            <label >Job Location <span style={{color:"red",fontWeight:"500"}}>*</span></label>
             <input
               value={city}
               type="text"
               placeholder="City"
               onChange={(e) => setCity(e.target.value)}
             /> <br />
+            <label >Company Logo <span style={{color:"red",fontWeight:"500"}}>*</span></label>
             <input
               type="url"
-              placeholder="Add image"
+              placeholder="Add Logo"
               value={img}
               onChange={(e) => setImg(e.target.value)}
             /> <br />
@@ -93,7 +99,7 @@ export const AddJobs = () => {
                 addJob();
               }}
             >
-              Add Job
+              Get started for free
             </button>
           </form>
         </div>

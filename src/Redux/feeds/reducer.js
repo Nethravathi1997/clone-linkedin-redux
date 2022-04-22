@@ -17,7 +17,7 @@ import {
         return {
           ...state,
           // counter: state.counter + payload,
-          feeds: [...state.feeds, payload],
+          feeds: [payload, ... state.feeds],
         };
       case ADD_FEED_LOADING:
         return {
@@ -27,7 +27,7 @@ import {
       case ADD_FEED_SUCCESS:
         return {
           ...state,
-          feeds: [...state.feeds, payload],
+          feeds: [payload, ... state.feeds],
           loading: false,
         };
   

@@ -25,29 +25,37 @@
       "id": 3
     },
     {
-        "title": "Software Development Engineer",
-        "company": "Amazon",
-        "city": "Bangalore, Karnataka, India",
-        "image": "https://wallpaperaccess.com/full/1308159.jpg",
-        "date": "4/22/2022, 2:13:12 PM",
-        "id": 4
-      },
-      {
-        "title": "React Js Developer",
-        "company": "Tata Consultancy Services",
-        "city": "India (Remote)",
-        "image": "https://pbs.twimg.com/profile_images/1341131884537860097/kYjaEIQA_400x400.png",
-        "date": "4/22/2022, 2:19:52 PM",
-        "id": 5
-      },
-      {
-        "title": "UI/UX Design Intern",
-        "company": "HackerEarth",
-        "city": "Bangalore, Karnataka, India (On-site)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png",
-        "date": "4/22/2022, 2:30:46 PM",
-        "id": 6
-      }
+      "title": "Software Development Engineer",
+      "company": "Amazon",
+      "city": "Bangalore, Karnataka, India",
+      "image": "https://wallpaperaccess.com/full/1308159.jpg",
+      "date": "4/22/2022, 2:13:12 PM",
+      "id": 4
+    },
+    {
+      "title": "React Js Developer",
+      "company": "Tata Consultancy Services",
+      "city": "India (Remote)",
+      "image": "https://pbs.twimg.com/profile_images/1341131884537860097/kYjaEIQA_400x400.png",
+      "date": "4/22/2022, 2:19:52 PM",
+      "id": 5
+    },
+    {
+      "title": "UI/UX Design Intern",
+      "company": "HackerEarth",
+      "city": "Bangalore, Karnataka, India (On-site)",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png",
+      "date": "4/22/2022, 2:30:46 PM",
+      "id": 6
+    },
+    {
+      "title": "Senior software Developer",
+      "company": "Infosys",
+      "city": "Bangalore (Remote now)",
+      "image": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1415386231/utypaslbyxwfuwhfdzxd.png",
+      "date": "4/22/2022, 8:36:58 PM",
+      "id": 7
+    }
   ],
   "appliedjobs": []
 }
