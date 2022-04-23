@@ -10,6 +10,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from '../contexts/AuthContext';
 import { useContext } from "react";
 

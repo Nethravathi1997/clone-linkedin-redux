@@ -40,3 +40,6 @@
 .header_right {
     display: flex;   
 }
+.header_right > .active{
+    color:black;
+}
