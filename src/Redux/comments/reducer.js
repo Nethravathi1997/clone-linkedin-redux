@@ -1,56 +1,56 @@
 import {
-    ADD_FEED,
-    ADD_FEED_LOADING,
-    ADD_FEED_SUCCESS,
-    ADD_FEED_ERROR,
-    GET_FEED_LOADING,
-    GET_FEED_SUCCESS,
-    GET_FEED_ERROR
+    ADD_COMMENT,
+    ADD_COMMENT_LOADING,
+    ADD_COMMENT_SUCCESS,
+    ADD_COMMENT_ERROR,
+    GET_COMMENT_LOADING,
+    GET_COMMENT_SUCCESS,
+    GET_COMMENT_ERROR
   } from "./actionTypes";
   
   // const init = { counter: 0 };
-  const init = { loading: false, feeds:[], error: false};
+  const init = { loading: false, comments:[], error: false};
   
   export const reducer = (state = init, { type, payload }) => {
     switch (type) {
-      case ADD_FEED:
+      case ADD_COMMENT:
         return {
           ...state,
-          feeds: [payload, ... state.feeds],
+          comments: [payload, ... state.comments],
         };
-      case ADD_FEED_LOADING:
+      case ADD_COMMENT_LOADING:
         return {
           ...state,
           loading: true,
         };
-      case ADD_FEED_SUCCESS:
+      case ADD_COMMENT_SUCCESS:
         return {
           ...state,
-          feeds: [payload, ... state.feeds],
+          comments: [payload, ... state.comments],
           loading: false,
         };
   
-      case ADD_FEED_ERROR:
+      case ADD_COMMENT_ERROR:
         return {
           ...state,
           loading: false,
           error: true,
         };
   
-      case GET_FEED_LOADING:
+      case GET_COMMENT_LOADING:
         return {
           ...state,
           loading: true,
         };
   
-      case GET_FEED_SUCCESS:
+      case GET_COMMENT_SUCCESS:
         return {
           ...state,
-          feeds: payload,
+          comments: payload,
           loading: false,
         };
   
-      case GET_FEED_ERROR:
+      case GET_COMMENT_ERROR:
         return {
           ...state,
           loading: false,

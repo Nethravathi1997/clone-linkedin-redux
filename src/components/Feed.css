@@ -8,6 +8,7 @@
     padding-bottom: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    height: 3cm;
 }
 .feed_input{
     border: 1px solid lightgray;
@@ -41,10 +42,24 @@
     margin-bottom: 10px;
     border-radius: 10px;
 }
+.myimg{
+    object-fit: contain;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.post__input{
+    flex: 1;
+}
 .post_header{
     display: flex;
     margin-bottom: 10px;
 
+}
+.post_form{
+    display: flex;
+    margin-top: 20px;
 }
 .post_info{
     margin-left: 15px;

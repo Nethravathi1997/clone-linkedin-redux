@@ -14,6 +14,10 @@ import ImageIcon from '@mui/icons-material/Image'
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions'
 import EventNoteIcon from '@mui/icons-material/EventNote'
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay'
+import Comments from "./Comments";
+import SendIcon from '@mui/icons-material/Send';
+
+
 import {
   addFeedError,
   addFeedLoading,
@@ -22,6 +26,7 @@ import {
   getFeedLoading,
   getFeedSuccess,
 } from "../Redux/feeds/actions.js";
+import { addCommentError, addCommentLoading, addCommentSuccess } from "../Redux/comments/actions";
 
 export const Feed = () => {
   const [text, setText] = useState("");
@@ -57,7 +62,31 @@ export const Feed = () => {
       dispatch(getFeedError());
     }
   }
-  const comment = () => {
+  const addComment = (index) => {
+    dispatch(addCommentLoading());
+    fetch("http://localhost:3005/comments", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: "Nethravathi",
+        description: "tnethravathi7@gmail.com",
+        title: text,
+        //comment:coment,
+      }),
+    })
+      .then((d) => d.json())
+      .then((res) => {
+        dispatch(addCommentSuccess(res));
+        getFeeds();
+      })
+      .catch((err) => {
+        dispatch(addCommentError(err));
+      });
+      setText("");
+
+    
 
   }
 
@@ -72,6 +101,7 @@ export const Feed = () => {
         name: "Nethravathi",
         description: "tnethravathi7@gmail.com",
         title: text,
+        //comment:coment,
       }),
     })
       .then((d) => d.json())
@@ -114,31 +144,33 @@ export const Feed = () => {
         </div>
         <div className="feed_inputOptions">
                 <div><InputOption Icon = {ImageIcon} title='Photo' color='#70B5f9'/></div>
-                <div onClick={() => {comment()}}><InputOption Icon = {SubscriptionsIcon} title='Video' color='#E7A33E'/></div>
+                <div><InputOption Icon = {SubscriptionsIcon} title='Video' color='#E7A33E'/></div>
                 <InputOption Icon = {EventNoteIcon} title='Event' color='#C0CBCD'/>
                 <InputOption Icon = {CalendarViewDayIcon} title='Write article' color='#7FC15E'/>
             </div>
       </div>
       <FlipMove>
-        {feeds.map((e, i) => (
-          <div key={i}>
+        {feeds.map(({name,description,title,comment},index) => (
+          <div key={index}>
             <div className="post">
               <div className="post_header">
-                <Avatar>{e.name[0]}</Avatar>
+                <img className="myimg" src="https://media-exp1.licdn.com/dms/image/C5603AQGfv8dnagAUuw/profile-displayphoto-shrink_400_400/0/1639128811499?e=1655942400&v=beta&t=TTLA68roivY_D_0EmcQCI0-CP66R1987jWRyP741Nyc" alt="" />
                 <div className="post_info">
-                  <h2>{e.name}</h2>
-                  <p>{e.description}</p>
+                  <h2>{name}</h2>
+                  <p>{description}</p>
                 </div>
               </div>
-              <div className="post_body">{e.title}</div>
+              <div className="post_body">{title}</div>
               <div className="post_buttons">
             <InputOption Icon={ThumbUpAltOutlinedIcon} title="Like" color='gray' />
-            <InputOption Icon={ChatOutlinedIcon} title="Comment" color='gray' />
+            <div onClick={{
+
+            }}><InputOption Icon={ChatOutlinedIcon} title="Comment" color='gray' /></div>
             <InputOption Icon={ShareOutlinedIcon} title="Share" color='gray' />
             <InputOption Icon={SendOutlinedIcon} title="Send" color='gray' />
-        </div>
-            </div>
-            
+        </div>     
+        </div>    
+           
           </div>
         ))}
       </FlipMove>

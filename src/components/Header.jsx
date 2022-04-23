@@ -33,19 +33,28 @@ function Header() {
         </div>
       </div>
       <div className="header_right">
-        <Link to="/">
+        <Link to="/" style={{
+          textDecoration:"none",
+        }}>
           <HeaderOption Icon={HomeIcon} title="Home" />
         </Link>
-        <Link to="/mynetwork">
+        <Link to="/mynetwork" style={{
+          textDecoration:"none",
+        }}>
           <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
         </Link>
-        <Link to="/jobs">
+        <Link to="/jobs" style={{
+          textDecoration:"none",
+        }}>
         <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
         </Link>
         <HeaderOption Icon={ChatIcon} title="Messaging" />
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-        <Link to="/login">
-          <HeaderOption avatar={true} title="me" />
+        <Link to="/login" style={{
+          textDecoration:"none",    
+          marginTop:"-10px",  
+       }}>
+           <img className="myimg" src="https://media-exp1.licdn.com/dms/image/C5603AQGfv8dnagAUuw/profile-displayphoto-shrink_400_400/0/1639128811499?e=1655942400&v=beta&t=TTLA68roivY_D_0EmcQCI0-CP66R1987jWRyP741Nyc" alt="" /> 
         </Link>
       </div>
     </div>

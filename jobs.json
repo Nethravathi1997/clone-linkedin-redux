@@ -55,7 +55,15 @@
       "image": "https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1415386231/utypaslbyxwfuwhfdzxd.png",
       "date": "4/22/2022, 8:36:58 PM",
       "id": 7
+    },
+    {
+      "title": "Junior Frontend Developer",
+      "company": "Oracle",
+      "city": "Mumbai (Navi) (Offices Open)",
+      "image": "https://sybyl.com/wp-content/uploads/2019/11/Oracle-Logo-For-Website.png",
+      "date": "4/23/2022, 12:38:15 PM",
+      "id": 8
     }
-  ],
-  "appliedjobs": []
+  ]
+  
 }

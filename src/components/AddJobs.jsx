@@ -48,10 +48,12 @@ export const AddJobs = () => {
       .then((d) => d.json())
       .then((res) => {
         dispatch(addJobSuccess(res));
+        
       })
       .catch((err) => {
         dispatch(addJobError(err));
       });
+      alert("Job Posted Successfully!")
     setText("");
   };
 

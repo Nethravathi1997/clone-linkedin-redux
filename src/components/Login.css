@@ -1,0 +1,32 @@
+.box{
+    height: 10cm;
+    margin-bottom: 2cm;
+}
+.box > h1 {
+    font-weight: 400;
+    text-align: left;
+    margin-left: 20px;
+}
+.box > p{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+.box > input {
+    width: 8cm;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    height: 10px;
+}
+.box > button {
+    background-color: rgb(10,102,194);
+    height: 50px;
+    width: 9cm;
+    border-radius: 25px;
+    margin-left: 20px;
+    border: none;
+    color: white;
+    font-size: large;
+    margin-top: 20px;
+}

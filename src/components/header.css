@@ -14,6 +14,9 @@
 .header_left{
     display: flex;
 }
+.header_right > Link {
+    text-decoration: none;
+}
 .header_left > img {
     object-fit: contain;
     height: 40px;

@@ -18,6 +18,7 @@
 .sidebar_top > h2 {
     font-size: 18px;
 }
+
 .sidebar_top{
     display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@
 
 }
 .sidebar_stat{
-    margin-top:10px;
+    margin-top:5px;
     display: flex;
     justify-content: space-between;
 }
@@ -80,8 +81,9 @@
     color: gray;
     font-weight: bolder;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     padding: 5px;
+    margin-top: -10px;
 }
 .sidebar_recentItem:hover{
     background-color: whitesmoke;
