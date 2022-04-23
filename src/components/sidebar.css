@@ -14,9 +14,12 @@
 .sidebar_top > h4 {
     color: gray;
     font-size: 12px;
+    margin-top: -10px;
 }
 .sidebar_top > h2 {
     font-size: 18px;
+    margin-top: -5px;
+    
 }
 
 .sidebar_top{
@@ -57,6 +60,7 @@
     color: gray;
     font-size: 13px;
     font-weight: 600;
+    margin-top: -5px;
 }
 .sidebar_statNumber{
     font-weight: bold;
