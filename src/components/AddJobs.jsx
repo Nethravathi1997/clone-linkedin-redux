@@ -32,7 +32,7 @@ export const AddJobs = () => {
 
   const addJob = () => {
     dispatch(addJobLoading());
-    fetch("http://localhost:3004/jobs", {
+    fetch("http://localhost:3001/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

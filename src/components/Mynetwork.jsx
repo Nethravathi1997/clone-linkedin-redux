@@ -43,7 +43,7 @@ function Mynetwork() {
   async function getUsers() {
     try {
       dispatch(getUserLoading());
-      const data = await fetch("http://localhost:3003/users").then((d) =>
+      const data = await fetch("http://localhost:3001/users").then((d) =>
         d.json()
       );
 

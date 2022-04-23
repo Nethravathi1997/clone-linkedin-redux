@@ -48,7 +48,7 @@ function Jobs() {
   async function getJobs() {
     try {
       dispatch(getJobLoading());
-      const data = await fetch("http://localhost:3004/jobs").then((d) =>
+      const data = await fetch("http://localhost:3001/jobs").then((d) =>
         d.json()
       );
 
