@@ -53,7 +53,7 @@ export const Feed = () => {
   async function getFeeds() {
     try {
       dispatch(getFeedLoading());
-      const data = await fetch("http://localhost:3001/feeds").then((d) =>
+      const data = await fetch("http://localhost:3002/feeds").then((d) =>
         d.json()
       );
 
@@ -66,7 +66,7 @@ export const Feed = () => {
 
   const addFeed = () => {
     dispatch(addFeedLoading());
-    fetch("http://localhost:3001/feeds", {
+    fetch("http://localhost:3002/feeds", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
