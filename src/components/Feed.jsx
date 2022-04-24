@@ -53,7 +53,7 @@ export const Feed = () => {
   async function getFeeds() {
     try {
       dispatch(getFeedLoading());
-      const data = await fetch("http://localhost:3002/feeds").then((d) =>
+      const data = await fetch("http://localhost:3001/feeds").then((d) =>
         d.json()
       );
 
@@ -62,37 +62,11 @@ export const Feed = () => {
       dispatch(getFeedError());
     }
   }
-  const addComment = (index) => {
-    dispatch(addCommentLoading());
-    fetch("http://localhost:3005/comments", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: "Nethravathi",
-        description: "tnethravathi7@gmail.com",
-        title: text,
-        //comment:coment,
-      }),
-    })
-      .then((d) => d.json())
-      .then((res) => {
-        dispatch(addCommentSuccess(res));
-        getFeeds();
-      })
-      .catch((err) => {
-        dispatch(addCommentError(err));
-      });
-      setText("");
-
-    
-
-  }
+  
 
   const addFeed = () => {
     dispatch(addFeedLoading());
-    fetch("http://localhost:3002/feeds", {
+    fetch("http://localhost:3001/feeds", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
