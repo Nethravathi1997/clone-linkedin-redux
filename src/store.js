@@ -1,4 +1,5 @@
 import { combineReducers, createStore } from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
 import { reducer as UsersReducer } from "./Redux/users/reducer";
 import { reducer as FeedsReducer } from "./Redux/feeds/reducer";
 import { reducer as JobsReducer } from "./Redux/Jobs/reducer";
@@ -10,5 +11,5 @@ const rootReducer = combineReducers({
     commentsState: CommentsReducer
 });
 
-export const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__() );
+export const store = createStore(rootReducer, composeWithDevTools() );
 console.log(store.getState());
