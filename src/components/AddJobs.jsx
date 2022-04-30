@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import CreateIcon from "@mui/icons-material/Create";
-import FlipMove from "react-flip-move";
 import "./addJobs.css";
-import { Avatar } from "@mui/material";
+
 import {
   addJobError,
   addJobLoading,
