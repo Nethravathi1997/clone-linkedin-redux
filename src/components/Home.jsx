@@ -9,7 +9,7 @@ function Home() {
     <div className='app_body'>
       <Sidebar />
       <Feed />
-      {/* <Widgets /> */}
+      <Widgets />
       </div>
     
   )
