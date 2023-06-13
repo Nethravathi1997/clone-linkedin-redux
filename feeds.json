@@ -1,6 +1,11 @@
 {
   "feeds": [
-   
+    {
+      "name": "Nethravathi",
+      "description": "tnethravathi7@gmail.com",
+      "title": "the masai is the emotion",
+      "id": 1
+    },
     {
       "name": "Nethravathi",
       "description": "tnethravathi7@gmail.com",
