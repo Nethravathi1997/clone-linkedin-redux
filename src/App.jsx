@@ -12,7 +12,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+ <div className="app_body">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="mynetwork" element={<Mynetwork />}></Route>
+          <Route path="jobs" element={<Jobs />}></Route>
+          <Route path="addjobs" element={<PrivateRoute><AddJobs /></PrivateRoute>}></Route>
+          <Route path="login" element={<Login />}></Route>
+        </Routes>
+      </div>
      
     </div>
   );
